@@ -1,0 +1,290 @@
+/* ========== Global Style ========== */
+html, body {
+  overflow-x: hidden;
+}
+
+* { 
+  margin: 0; 
+  padding: 0; 
+  box-sizing: border-box; 
+  font-family: 'Poppins', sans-serif, 'Raleway', sans-serif;
+}
+
+body {
+  font-size: 16px;
+  line-height: 1.6;
+  background-color: #fefefe;
+  color: #111;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+a { 
+  text-decoration: none; 
+  color: inherit; 
+  transition: color 0.3s ease; 
+}
+
+.container { 
+  width: 100%; 
+  max-width: 1200px; 
+  margin: 0; 
+}
+
+/* ========== Light & Dark Mode ========== */
+body.light {
+  background-color: #ffffff;
+  color: #111;
+}
+
+body.dark {
+  background-color: #11281e;
+  color: #ffffff;
+}
+
+/* ========== Header ========== */
+.glass-header { 
+  position: fixed; 
+  top: 0; 
+  width: 100%; 
+  backdrop-filter: blur(16px); 
+  background: linear-gradient(135deg, #6bbf63, #3da849, #2e8f5f);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2); 
+  z-index: 999; 
+  transition: 0.4s ease, background 0.4s ease;
+  color: #ffffff;
+  overflow: hidden;
+}
+
+body.dark .glass-header {
+  background: linear-gradient(135deg, #204b2b, #2d6a38, #1e4f30);
+  color: #ffffff;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 50px;
+  position: relative;
+}
+
+/* ========== Logo/Brand ========== */
+.brand-link {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  text-decoration: none;
+}
+
+.brand-img {
+  width: 150px;          
+  height: 50px;         
+  object-fit: contain;  
+  border: none;       
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.brand-img:hover {
+  transform: scale(1.08);
+  filter: drop-shadow(0 4px 10px rgba(255,255,255,0.45));
+}
+
+/* ========== Navigation ========== */
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 20px; 
+  justify-content: center; 
+  height: 100%;
+}
+
+.main-nav ul {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.main-nav a {
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+  transition: transform 0.3s ease, color 0.3s ease;
+  justify-content: center;
+  padding: 5px 0;
+}
+
+.main-nav a:hover {
+  color: #000000;
+  transform: scale(1.1);
+}
+
+.main-nav a::after {
+  content: '';
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background: rgb(0, 0, 0); 
+  border-radius: 3px;
+  transition: width 0.3s ease;
+}
+
+.main-nav a:hover::after {
+  width: 100%;
+}
+
+.theme-toggle {
+  font-size: 1.6rem;         
+  cursor: pointer;
+  color: #ffffff;            
+  background: none;           
+  border: none;               
+  padding: 0;
+  margin-left: 15px;          
+  transition: transform 0.3s ease, color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.theme-toggle:hover {
+  transform: rotate(15deg) scale(1.2);                   
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.838); 
+}
+
+
+/* ========== Footer ========== */
+.site-footer {
+  text-align: center;
+  padding: 1.5rem 1rem;
+  background: linear-gradient(135deg, #6bbf63, #3da84a, #2e8f5f);
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.9rem;
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.2);
+}
+
+body.dark .site-footer {
+  background: linear-gradient(135deg, #204b2b, #2d6a38, #1e4f30);
+  color: #ffffff;
+}
+
+
+/* ========== Biography ========== */
+.author-bio {
+  padding: 3rem 1rem;
+}
+
+.bio-container {
+  max-width: 800px;
+  margin: 5rem auto;
+  border-radius: 30px;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.377);
+  padding: 2.5rem;
+  object-position: center;
+  text-align: center;
+  background-color: white;
+}
+
+body.dark .author-bio {
+  color: white;
+}
+.bio-image img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  border: 4px solid var(--primary);
+}
+
+.bio-text h1 {
+  font-size: 2rem;
+  color: var(--primary);
+  margin-bottom: 0.1rem;
+}
+
+.bio-text h2 {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 1.5rem;
+
+}
+
+.bio-text p {
+  line-height: 1.7;
+  margin-bottom: 1rem;
+  text-align: justify;
+  text-indent: 3em;
+}
+
+body.dark .bio-text h1, .bio-text h2, .bio-text p {
+  color:black;
+}
+
+.bio-text ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.social-links a {
+  margin-right: 10px;
+  color: var(--primary);
+  font-size: 2rem;
+  transition: var(--transition);
+  gap: 80px;
+}
+
+.social-links a:hover {
+  color: #2e7030;
+}
+
+.back-btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 10px 20px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #6bbf63, #3da849, #2e8f5f);
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.back-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px rgba(0, 128, 0, 0.35);
+}
+
+.back-btn:active {
+  transform: scale(0.94);
+  box-shadow: 0 4px 10px rgba(0, 128, 0, 0.2);
+}
+
+.back-btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.25);
+  transform: skewX(-20deg);
+  transition: 0.4s ease;
+}
+
+.back-btn:hover::after {
+  left: 100%;
+}
+
+
