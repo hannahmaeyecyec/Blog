@@ -12,15 +12,3 @@ toggleBtn.addEventListener("click", () => {
     toggleBtn.textContent = "🌙";
   }
 });
-
-// Back to Top
-const toTop = document.querySelector(".back-to-top");
-
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 300) {
-    toTop.classList.add("show");
-  } else {
-    toTop.classList.remove("show");
-  }
-});
-
