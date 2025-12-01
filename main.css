@@ -1258,3 +1258,145 @@ body.dark .contact-info h2,
   height: 250px;
   border: none;
 }
+
+
+
+/* ========== HAMBURGER MENU STYLES (only show on mobile) ========== */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  width: 28px;
+  cursor: pointer;
+  gap: 6px;
+  z-index: 9999;
+}
+
+.hamburger span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background: #ffffff;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.mobile-nav {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 70%;
+  height: 100vh;
+  background: linear-gradient(135deg, #204b2b, #2d6a38, #1e4f30);
+  padding-top: 80px;
+  transition: right 0.35s ease;
+  box-shadow: -4px 0 14px rgba(0,0,0,0.3);
+  z-index: 9998;
+}
+
+.mobile-nav ul {
+  list-style: none;
+  padding-left: 20px;
+}
+
+.mobile-nav ul li {
+  margin: 18px 0;
+}
+
+.mobile-nav ul li a {
+  color: #fff;
+  font-size: 1.3rem;
+  text-decoration: none;
+  display: block;
+  padding: 10px;
+  transition: 0.3s;
+}
+
+.mobile-nav ul li a:hover {
+  color: #6bbf63;
+  padding-left: 18px;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .main-nav {
+    display: none;
+  }
+
+  .mobile-nav.active {
+    right: 0;
+  }
+
+  .hamburger.active span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+  }
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+  }
+}
+
+
+
+/* ========== RESPONSIVE BREAKPOINTS ========== */
+/* Tablets / Large Phones */
+@media (max-width: 1024px) {
+  .mainblog-container {grid-template-columns: 1fr; padding: 20px;}
+  .mainblog-content h2 {font-size: 1.4rem;}
+  .mainblog-card img {height: 180px;}
+  .banner-overlay h1 {font-size: 4.5rem;}
+  .authors-banner {height: 350px;}
+  .contact-header h1 {font-size: 3rem;}
+  .contact-header p {width: 90%; font-size: 0.95rem;}
+  .contact-map iframe {height: 220px;}
+}
+
+/* Standard Mobile */
+@media (max-width: 768px) {
+  .authors-row,.authors-row2 {width: 100%; margin: 30px auto; gap: 20px;}
+  .blog-card {width: 90%; margin-top: 10px;}
+  .blog-card img {height: 200px;}
+  .banner-overlay h1 {font-size: 3.5rem;}
+  .authors-banner {height: 280px;}
+  .section-header h2 { font-size: 2rem;}
+  .section-header p {font-size: 0.95rem;}
+  .contact-container {flex-direction: column; gap: 1.5rem;}
+  .glass-card {margin-top: 0;}
+  .contact-header h1 {font-size: 2.5rem;}
+  .contact-header p {font-size: 0.9rem;}
+  .contact-map iframe {height: 200px;}
+}
+
+/* Small Phones */
+@media (max-width: 480px) {
+  .brand-img {width: 100px;}
+  .theme-toggle {font-size: 1.3rem;}
+  #backToTop {width: 40px; height: 40px; font-size: 18px;}
+  .mainblog-container {padding: 10px; gap: 20px;}
+  .mainblog-content {padding: 15px;}
+  .mainblog-card img {height: 150px;}
+  .mainblog-content h2 {font-size: 1.3rem;}
+  .mainblog-content p {font-size: 0.95rem;}
+  .mainblog-content .btn {padding: 8px 15px; font-size: 0.85rem;}
+  .blog-card {width: 95%;}
+  .banner-overlay h1 {font-size: 2.8rem;}
+  .authors-banner {height: 230px;}
+  .blog-content p {font-size: 0.88rem;}
+  .bio-btn {font-size: 0.85rem; padding: 8px 16px;}
+  .contact-header h1 {font-size: 2rem;}
+  .contact-header p {font-size: 0.85rem;}
+  .contact-form button {padding: 10px 16px;}
+  .contact-map iframe {height: 180px;}
+  .social-links a {font-size: 1.3rem; margin-left: 20px;}
+}
+
+/* VERY SMALL DEVICES (≤ 360px width) */
+@media screen and (max-width: 360px) {
+  .blog-intro h3 {font-size: 1.8rem;}
+  .mainblog-card img {height: 130px;}
+  .mainblog-content h2 {font-size: 1.15rem;}
+}
