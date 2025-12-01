@@ -121,7 +121,7 @@ body.dark .glass-header {
 }
 
 .main-nav a:hover {
-  color: #000000;
+  color: #fed955;
   transform: scale(1.1);
 }
 
@@ -132,7 +132,7 @@ body.dark .glass-header {
   left: 0;
   width: 0%;
   height: 3px;
-  background: rgb(0, 0, 0); 
+  background: #fed955; 
   border-radius: 3px;
   transition: width 0.3s ease;
 }
@@ -157,6 +157,27 @@ body.dark .glass-header {
   text-shadow: 0 0 8px rgba(255, 255, 255, 0.838); 
 }
 
+nav li.active a {
+  color: #fed955;
+  position: relative;
+  font-weight: bold; 
+}
+
+nav li.active a::after {
+  content: '';
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  width: 100%;             
+  height: 3px;            
+  background: #fed955; 
+  border-radius: 3px;
+}
+
+
+
+
+
 
 /* ===== Footer ===== */
 .site-footer {
@@ -173,6 +194,55 @@ body.dark .site-footer {
   background: linear-gradient(135deg, #204b2b, #2d6a38, #1e4f30);
   color: #ffffff;
 }
+
+
+/* ========== Back to Top Button ========== */
+#backToTop {
+  position: fixed;
+  right: 18px;
+  bottom: 24px;
+  width: 48px;
+  height: 48px;
+
+  display: none; 
+  align-items: center;
+  justify-content: center;
+
+  background: linear-gradient(135deg, #3da849, #6bbf63);
+  color: #fff;
+
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 22px;
+
+  box-shadow: 0 4px 16px rgba(61, 168, 73, 0.25);
+  transition: 
+    opacity 0.3s ease,
+    transform 0.25s ease,
+    box-shadow 0.3s ease;
+  z-index: 999;
+}
+
+#backToTop.show {
+  display: flex;
+  opacity: 1;
+}
+
+#backToTop:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 22px rgba(61, 168, 73, 0.35);
+}
+
+#backToTop:active {
+  transform: scale(0.85);
+}
+
+
+
+
+
+
 
 .blog-container {
   width: 90%;
@@ -364,7 +434,7 @@ object-fit: cover;
   gap: 10px;
   margin-bottom: 20px;
   padding-bottom: 8px;
-  border-bottom: 1px solid #d0e8d0; /* thin underline like Safety section */
+  border-bottom: 1px solid #d0e8d0; 
 }
 
 .attractions-list {

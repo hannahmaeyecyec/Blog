@@ -178,6 +178,49 @@ nav li.active a::after {
 
 
 
+/* ========== Back to Top Button ========== */
+#backToTop {
+  position: fixed;
+  right: 18px;
+  bottom: 24px;
+  width: 48px;
+  height: 48px;
+
+  display: none; 
+  align-items: center;
+  justify-content: center;
+
+  background: linear-gradient(135deg, #3da849, #6bbf63);
+  color: #fff;
+
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 22px;
+
+  box-shadow: 0 4px 16px rgba(61, 168, 73, 0.25);
+  transition: 
+    opacity 0.3s ease,
+    transform 0.25s ease,
+    box-shadow 0.3s ease;
+  z-index: 999;
+}
+
+#backToTop.show {
+  display: flex;
+  opacity: 1;
+}
+
+#backToTop:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 22px rgba(61, 168, 73, 0.35);
+}
+
+#backToTop:active {
+  transform: scale(0.85);
+}
+
+
 /* ===== Footer ===== */
 .site-footer {
   text-align: center;
@@ -377,7 +420,6 @@ body.dark .intro-title::after {
 body.dark .intro-text {
   color:#d7f7e2;
 }
-
 
 
 

@@ -36,6 +36,10 @@
 
 <script src="script.js"></script>
 
+<button id="backToTop" aria-label="Scroll to top">
+  <i class="fa-solid fa-chevron-up"></i>
+</button>
+
 <section class="hero">
   <div class="hero-overlay"></div>
   <div class="container hero-content">
@@ -175,6 +179,25 @@
 <footer class="site-footer">
   <p>&copy; 2025 SAKAH. All Rights Reserved.</p>
 </footer>
+
+<script>
+  const topBtn = document.getElementById("backToTop");
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+      topBtn.classList.add("show");
+    } else {
+      topBtn.classList.remove("show");
+    }
+  });
+
+  topBtn.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+</script>
 
 </body>
 </html>
