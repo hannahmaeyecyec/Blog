@@ -853,8 +853,8 @@ body.dark .fun-fact-card p {
   justify-content: center;
   gap: 30px;
   flex-wrap: wrap;
-  margin: 50px 20px;
-  width: 90%;
+  width: 90%;       
+  margin: 50px auto;
 }
 
 .authors-row2 {
@@ -863,9 +863,9 @@ body.dark .fun-fact-card p {
   gap: 30px;
   flex-wrap: wrap;
   width: 90%;
-  margin-top: 100px;
-  margin-bottom: 50px;
+  margin: 100px auto 50px auto; 
 }
+
 
 .blog-card {
   background: #ffffff;
