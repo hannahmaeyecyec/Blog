@@ -1,4 +1,4 @@
-/* ========== Global Style ========== */
+/* ========== GLOBAL STYLE ========== */
 html, body {
   overflow-x: hidden;
 }
@@ -30,7 +30,9 @@ a {
   margin: 0; 
 }
 
-/* ========== Light & Dark Mode ========== */
+
+
+/* ========== LIGHT & DARK MODE ========== */
 body.light {
   background-color: #ffffff;
   color: #111;
@@ -41,7 +43,9 @@ body.dark {
   color: #ffffff;
 }
 
-/* ========== Header ========== */
+
+
+/* ========== HEADER ========== */
 .glass-header { 
   position: fixed; 
   top: 0; 
@@ -68,7 +72,9 @@ body.dark .glass-header {
   position: relative;
 }
 
-/* ========== Logo/Brand ========== */
+
+
+/* ========== LOGO/BRAND ========== */
 .brand-link {
   display: flex;
   align-items: center;
@@ -89,7 +95,9 @@ body.dark .glass-header {
   filter: drop-shadow(0 4px 10px rgba(255,255,255,0.45));
 }
 
-/* ========== Navigation ========== */
+
+
+/* ========== NAVIGATION ========== */
 .main-nav {
   display: flex;
   align-items: center;
@@ -176,10 +184,7 @@ nav li.active a::after {
 
 
 
-
-
-
-/* ===== Footer ===== */
+/* ========== FOOOTER ========== */
 .site-footer {
   text-align: center;
   padding: 1.5rem 1rem;
@@ -196,7 +201,7 @@ body.dark .site-footer {
 }
 
 
-/* ========== Back to Top Button ========== */
+/* ========== BACK TO TOP BUTTON ========== */
 #backToTop {
   position: fixed;
   right: 18px;
@@ -317,8 +322,6 @@ body.dark .site-footer {
     transform: translateY(-9px) rotate(-45deg);
   }
 }
-
-
 
 
 
