@@ -1,14 +1,25 @@
-// Theme Toggle Script
+// LIGHT & DARK MODE 
 const toggleBtn = document.getElementById("mode-toggle");
 const body = document.body;
 
+// Load saved theme on page load
+const savedTheme = localStorage.getItem("theme");
+
+if (savedTheme === "dark") {
+  body.classList.add("dark");
+  toggleBtn.textContent = "☀️";
+}
+
+// Toggle theme
 toggleBtn.addEventListener("click", () => {
   body.classList.toggle("dark");
 
-  // Change the icon
+  // Save the current theme
   if (body.classList.contains("dark")) {
+    localStorage.setItem("theme", "dark");
     toggleBtn.textContent = "☀️";
   } else {
+    localStorage.setItem("theme", "light");
     toggleBtn.textContent = "🌙";
   }
 });
