@@ -907,7 +907,7 @@ body.dark .blog-intro h3::after {
 }
 
 .blog-content h2 {
-  font-size: 1.4rem;
+  font-size: clamp(1.1rem, 1.8vw, 1.4rem); 
   font-weight: 700;
   margin-bottom: 2px;
   background: linear-gradient(135deg, #6bbf63, #3da849, #2e8f5f);
@@ -1342,6 +1342,7 @@ body.dark .contact-info h2,
   .contact-header h1 {font-size: 3rem;}
   .contact-header p {width: 90%; font-size: 0.95rem;}
   .contact-map iframe {height: 220px;}
+  .blog-content h2 {font-size: 1.3rem;}
 }
 
 /* Standard Mobile */
@@ -1381,6 +1382,7 @@ body.dark .contact-info h2,
   .contact-form button {padding: 10px 16px;}
   .contact-map iframe {height: 180px;}
   .social-links a {font-size: 1.3rem; margin-left: 20px;}
+  .blog-content h2 {font-size: 1.2rem; }
 }
 
 /* VERY SMALL DEVICES (≤ 360px width) */
